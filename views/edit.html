@@ -1,19 +1,21 @@
-<form class="form-inline" name="patient_info">
-	<div class="form-group">
-		<label for="first_name">First Name</label>
-		<input class="form-control" type="text" name="first_name" ng-model="user_info.first_name"/>
-		<label for="last_name">Last Name</label>
-		<input class="form-control" type="text" name="last_name" ng-model="user_info.last_name"/>
-	</div><br/>
-	<div class="form-group">
-		<label for="gender">Gender</label><br/>
-		<input class="form-control" type="text" name="gender" ng-model="user_info.gender" />
-		<label for="provider">Provider</label>
-		<input class="form-control" type="text" name="provider" ng-model="user_info.provider"/>
-	</div><br/><br/>
-	<label for="notes">Notes</label>
-	<textarea class="form-control" type="text" name="notes" ng-model="user_info.notes" rows="3" cols="auto"></textarea><br/><br/>
-	<p>
-		<button class="btn btn-success btn-lg btn-block">Save <span class="glyphicon glyphicon-ok"></span></button>
-	</p>
-</form>
+<div class="jumbotron container">
+	<form class="center-block form-inline" name="patient_info">
+		<div class="form-group">
+			<label for="first_name">First Name</label>
+			<input class="form-control" type="text" name="first_name" ng-model="user_info.first_name"/>
+			<label for="last_name">Last Name</label>
+			<input class="form-control" type="text" name="last_name" ng-model="user_info.last_name"/>
+		</div><br/>
+		<div class="form-group">
+			<label for="gender">Gender</label><br/>
+			<input class="form-control" type="text" name="gender" ng-model="user_info.gender" />
+			<label for="provider">Provider</label>
+			<input class="form-control" type="text" name="provider" ng-model="user_info.provider"/>
+		</div><br/><br/>
+		<label for="notes">Notes</label>
+		<textarea class="form-control" type="text" name="notes" ng-model="user_info.notes" rows="3" cols="auto"></textarea><br/><br/>
+		<p>
+			<button class="btn btn-success btn-lg btn-block">Save <span class="glyphicon glyphicon-ok"></span></button>
+		</p>
+	</form>
+</div>

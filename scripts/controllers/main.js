@@ -72,6 +72,7 @@ app.controller('ScanCtrl', ['$scope', '$routeParams',
 app.controller('UploadCtrl', ['$scope', '$routeParams', 'upload_service',
     function($scope, $routeParams, upload_service) {
         $scope.type = $routeParams.scan_type;
+        $scope.user_id = $routeParams.user_id;
         $scope.loading = "hidden";
         $scope.uploadScans = function(scans) {
             $scope.loading = "show";
