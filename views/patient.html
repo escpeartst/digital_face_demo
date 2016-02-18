@@ -1,0 +1,9 @@
+<div>
+	<h4>#{{patient.id}} {{patient.first_name}} {{patient.last_name}}</h4>
+	
+	<p>
+		<a class="btn btn-default btn-lg btn-block" ng-href="#/{{key}}/{{patient.id}}" ng-repeat="(key, value) in user_orders" role="button">
+			{{value}}
+		</a>
+	</p>
+</div>

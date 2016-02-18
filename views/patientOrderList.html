@@ -1,0 +1,52 @@
+<div class="jumbotron container">
+	<div class="title">
+		<h3>
+		<span class="pull-left">Patient Order List</span>
+		<span class="pull-right glyphicon glyphicon-plus-sign" ng-click="add_patient();">ADD</span>
+		</h3>
+	</div>
+	<br/>
+	<br/>
+	<p>
+		<table class="table table-striped table-hover table-condense">
+			<thead>
+				<tr>
+					<td>
+						<span> First Name </span>
+					</td>
+					<td>
+						<span> Last Name </span>
+					</td>
+					<td>
+						<span> Gender </span>
+					</td>
+					<td>
+						<span> Orders </span>
+					</td>
+					<td>
+						<span> Edit Info </span>
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="p in patients track by $index" style="cursor: pointer;">
+					<td>
+						<span>{{p.first_name}}</span>
+					</td>
+					<td>
+						<span>{{p.last_name}}</span>
+					</td>
+					<td>
+						<span>{{p.gender}}</span>
+					</td>
+					<td>
+						<a class="glyphicon glyphicon-user" ng-href="#/patient/{{p.uid}}"></a>
+					</td>
+					<td>
+						<a class="glyphicon glyphicon-pencil" ng-href="#/patient/edit/{{p.uid}}"></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</p>
+</div>

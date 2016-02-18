@@ -1,0 +1,12 @@
+<div>
+	<h4 class="text-center">
+	{{type | uppercase}} SCAN
+	</h4>
+	<div ngf-drop="uploadScans($files)" ngf-select="uploadScans($files)" ngf-multiple="true" ng-model="files" class="drop-box">
+		<scan>Upload files Here</scan>
+		<scan class="fa fa-circle-o-notch fa-spin fa-4x {{loading}}"></scan>
+		<h3 ng-if="upload_completed">
+			{{upload_completed}}
+		</h3>
+	</div>
+</div>
