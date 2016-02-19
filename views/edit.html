@@ -1,20 +1,22 @@
 <div class="jumbotron container text-center">
-	<form class="center-block form-inline" name="patient_info">
+	<form class="form-inline" name="patient_info">
 		<div class="form-group">
-			<label for="first_name">First Name</label>
-			<input class="form-control" type="text" name="first_name" ng-model="user_info.first_name"/>
-			<label for="last_name">Last Name</label>
-			<input class="form-control" type="text" name="last_name" ng-model="user_info.last_name"/>
-		</div><br/>
-		<div class="form-group">
-			<label for="gender">Gender</label>
-			<input class="form-control" name="gender" ng-model="user_info.gender" disabled/>
-			<label for="provider">Provider</label>
-			<input class="form-control" type="text" name="provider" ng-model="user_info.provider"/>
+			<p>
+				<label for="first_name">First Name</label>
+				<input class="form-control" type="text" name="first_name" ng-model="user_info.first_name"/>
+				<label for="last_name">Last Name</label>
+				<input class="form-control" type="text" name="last_name" ng-model="user_info.last_name"/>
+			</p>
+			<p>
+				<label for="gender">Gender</label>
+				<input class="form-control" name="gender" ng-model="user_info.gender" disabled/>
+				<label for="provider">Provider</label>
+				<input class="form-control" type="text" name="provider" ng-model="user_info.provider"/>
+			</p>
 		</div>
 		<p>
 			<label for="notes">Notes</label>
-			<textarea class="form-control" type="text" name="notes" ng-model="user_info.notes" rows="3" cols="auto"></textarea><br/><br/>
+			<textarea class="form-control" name="notes" ng-model="user_info.notes" rows="6" cols="80"></textarea>
 		</p>
 		<p>
 			<button class="btn btn-danger btn-lg" ng-click="delete_user()"><span class="glyphicon glyphicon-remove">Delete</span></button>
