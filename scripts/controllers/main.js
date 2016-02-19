@@ -91,6 +91,14 @@ app.controller('EditCtrl', ['$scope', '$routeParams', 'user_service',
     		$scope.user_info = data.patient_info[0];
     		$scope.user_info.gender = data.patient_info[0].gender.toUpperCase();
     	});
+
+        $scope.update_user = function(){
+            alert("User Information Updated");
+        };
+
+        $scope.delete_user = function(){
+            confirm("Delete User?");
+        }
     }
 ]);
 

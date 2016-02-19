@@ -63,7 +63,7 @@ app.config(function($routeProvider) {
                             alert("Your order has been cancelled");
                         }
                         if(instruct === 'order'){
-                          alert("Your order has been submitted, Thank you");
+                          alert("Your order has been submitted, We will reach out to you shortly. Thank you!");
                         }
 
                         $location.path("/patient/"+$routeParams.user_id);

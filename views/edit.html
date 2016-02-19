@@ -1,4 +1,4 @@
-<div class="jumbotron container">
+<div class="jumbotron container text-center">
 	<form class="center-block form-inline" name="patient_info">
 		<div class="form-group">
 			<label for="first_name">First Name</label>
@@ -7,15 +7,18 @@
 			<input class="form-control" type="text" name="last_name" ng-model="user_info.last_name"/>
 		</div><br/>
 		<div class="form-group">
-			<label for="gender">Gender</label><br/>
-			<input class="form-control" type="text" name="gender" ng-model="user_info.gender" />
+			<label for="gender">Gender</label>
+			<input class="form-control" name="gender" ng-model="user_info.gender" disabled/>
 			<label for="provider">Provider</label>
 			<input class="form-control" type="text" name="provider" ng-model="user_info.provider"/>
-		</div><br/><br/>
-		<label for="notes">Notes</label>
-		<textarea class="form-control" type="text" name="notes" ng-model="user_info.notes" rows="3" cols="auto"></textarea><br/><br/>
+		</div>
 		<p>
-			<button class="btn btn-success btn-lg btn-block">Save <span class="glyphicon glyphicon-ok"></span></button>
+			<label for="notes">Notes</label>
+			<textarea class="form-control" type="text" name="notes" ng-model="user_info.notes" rows="3" cols="auto"></textarea><br/><br/>
+		</p>
+		<p>
+			<button class="btn btn-danger btn-lg" ng-click="delete_user()"><span class="glyphicon glyphicon-remove">Delete</span></button>
+			<button class="btn btn-success btn-lg" ng-click="update_user()"><span class="glyphicon glyphicon-ok">Save </span></button>
 		</p>
 	</form>
 </div>
