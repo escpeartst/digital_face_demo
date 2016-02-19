@@ -6,10 +6,15 @@
 		<scan>Upload files Here</scan>
 		<scan class="fa fa-circle-o-notch fa-spin fa-4x {{loading}}"></scan>
 		<h3 ng-if="upload_completed">
-			{{upload_completed}}
+		{{upload_completed}}
 		</h3>
 	</div>
-	<a ng-href="#/patient/{{user_id}}">
-		<button class="btn btn-primary btn-block btn-lg">Go back</button>
-	</a>
+	<div class="text-center">
+		<a ng-href="#/patient/{{user_id}}">
+			<button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-arrow-left">Cancel</span></button>
+		</a>
+		<a ng-href="#/patient/{{user_id}}">
+			<button class="btn btn-success btn-lg"><span class="glyphicon glyphicon-ok">Done</span></button>
+		</a>
+	</div>
 </div>
