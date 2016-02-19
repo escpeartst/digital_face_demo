@@ -26,41 +26,55 @@ app.config(function($routeProvider) {
             controllerAs: 'about'
         })
         .when("/sign-up", {
-          templateUrl : 'views/signup.html',
-          controller: "MainCtrl",
-          controllerAs: 'signup'
+            templateUrl: 'views/signup.html',
+            controller: "MainCtrl",
+            controllerAs: 'signup'
         })
         .when("/patient-list", {
-          templateUrl : 'views/patientOrderList.html',
-          controller: "PatientCtrl",
-          controllerAs: 'patientOrders'
+            templateUrl: 'views/patientOrderList.html',
+            controller: "PatientCtrl",
+            controllerAs: 'patientOrders'
         })
         .when("/patient/:user_id", {
-          templateUrl: 'views/patient.html',
-          controller: "PatientUserCtrl"
+            templateUrl: 'views/patient.html',
+            controller: "PatientUserCtrl"
         })
-        .when("/scan/:user_id",{
-          templateUrl: 'views/scanHome.html',
-          controller: "ScanCtrl"
+        .when("/scan/:user_id", {
+            templateUrl: 'views/scanHome.html',
+            controller: "ScanCtrl"
         })
-        .when("/scan/:user_id/:scan_type",{
-          templateUrl: 'views/scanUpload.html',
-          controller: "UploadCtrl"
+        .when("/scan/:user_id/:scan_type", {
+            templateUrl: 'views/scanUpload.html',
+            controller: "UploadCtrl"
         })
-        .when("/plan/:user_id",{
-          template: "<div class='jumbotron text-center'><h3>Plans coming soon! Please check back </h3></div>"
+        .when("/plan/:user_id", {
+            template: "<div class='jumbotron text-center'><h3>Plans coming soon! Please check back </h3></div>"
         })
-        .when("/preview/:user_id",{
-          templateUrl: "views/previewScans.html",
-          controller: "PreviewCtrl"
+        .when("/preview/:user_id", {
+            templateUrl: "views/previewScans.html",
+            controller: "PreviewCtrl"
         })
-        .when("/order/:user_id",{
-          template: "<div class='jumbotron text-center'><h3>Order coming soon! Please check back </h3></div>"
+        .when("/order/:user_id", {
+            templateUrl: "views/orderView.html",
+            controller: ['$scope', '$routeParams', '$location',
+                function($scope, $routeParams, $location) {
+                    $scope.submit = function(instruct) {
+                        if (instruct === 'cancel') {
+                            alert("Your order has been cancelled");
+                        }
+                        if(instruct === 'order'){
+                          alert("Your order has been submitted, Thank you");
+                        }
+
+                        $location.path("/patient/"+$routeParams.user_id);
+                    }
+                }
+            ]
         })
         .when('/patient/edit/:user_id', {
-          templateUrl: 'views/edit.html',
-          controller: 'EditCtrl',
-          controllerAs: 'edit'
+            templateUrl: 'views/edit.html',
+            controller: 'EditCtrl',
+            controllerAs: 'edit'
         })
         .otherwise({
             redirectTo: '/'

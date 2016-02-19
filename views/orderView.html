@@ -1,0 +1,35 @@
+<div class="center-block container">
+	<header class="text-center">
+		<h3>
+		Orders
+		</h3>
+	</header>
+	<form>
+		<div class="text-center">
+			<p>
+				<label for="patient_order">Patient Order: </label>
+				<span class="form-control-static">David Huynh</span>
+			</p>
+			<p>
+				<label for="name">Provider: </label>
+				<span class="form-control-static">Ivan Chicchon</span>
+			</p>
+			<p>
+				<select class="form-control text-center" multiple>
+					<option value="nose" selected>Nose</option>
+					<option value="ear" >Ear</option>
+					<option value="mouth" selected>Mouth</option>
+					<option value="mask" >Mask</option>
+					<option value="cpap" >CPAP</option>
+				</select>
+			</p>
+			<p>
+				<select class="form-control">
+					<option value="surgery_depo" selected>Department Of Surgery</option>
+				</select>
+			</p>
+			<button class="btn btn-md btn-danger" ng-click="submit('cancel')"><span class="glyphicon glyphicon-remove">Cancel</span></button>
+			<button class="btn btn-md btn-success" ng-click="submit('order')"><span class="glyphicon glyphicon-ok">Submit</span></button>
+		</div>
+	</form>
+</div>
